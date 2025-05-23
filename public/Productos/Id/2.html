@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!--FUENTES-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!--SÍMBOLOS-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="/styles.css"> <link rel="stylesheet" href="/catalogo.css">
+    <title>Catálogo</title>
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar navbar-expand-lg bg-body-tertiar">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon material-symbols-outlined" >menu</span><span style="font-family: Inter; font-weight: 310; font-size: 1.2rem;">Menú</span>
+                </button>
+                <a class="navbar-brand" id="titulo" href="/index.html">POWERFUEL STORE</a>
+                <button class="navbar-cart" type="button">
+                    <a class="material-symbols-outlined" href="/carrito.html">shopping_cart</a>
+                </button>
+                <div class="cuadro-busqueda">
+                    <input type="text" placeholder="Buscar...">
+                </div>
+                <button class="navbar-search">
+                    <span class="material-symbols-outlined">search</span>
+                </button>
+            </div>
+          </nav>
+          <div class="collapse navbar-collapse oculto" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/index.html">inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/catalogo.html">catálogo</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/carrito.html">carrito</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/contacto.html" aria-disabled="true">contacto</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <main class="main">
+        <div class="publicacion">
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer__info">
+            <ul>
+                <li class="footer__info-item">Nombre de la empresa: <span>PowerFuelStore</span></li>
+                <li class="footer__info-item">Dirección: <span>Yerbal 2340, Ciudad Autónoma de Buenos Aires</span></li>
+                <li class="footer__info-item">Teléfono: <span>+54 11 3030-7604</span></li>
+                <li class="footer__info-item">Correo Electrónico: <span>soporte@pwrflstore.com</span></li>
+                <li class="footer__info-item footer-media">Redes sociales:
+                    <ul>
+                    <li class="footer__info-item">
+                        <img src="/Imagenes/ig.webp" alt="">
+                        <a href="instagram.com">@powerfuel.store</a>
+                    </li>
+                    <li class="footer__info-item">
+                        <img src="/Imagenes/fb.webp" alt="">
+                        <a href="facebook.com">PowerFuel Store</a>
+                    </li>
+                    <li class="footer__info-item">
+                        <img src="/Imagenes/tw.webp" class="tw-img" alt="">
+                        <a href="x.com">@PowerfuelStore</a>
+                    </li>
+                    </ul>
+                </li>
+                
+                <li class="footer__info-item">Copyright:</li>
+            </ul>
+        </div>
+        <div class="end-title">© <span id="footer-year"></span> PowerFuelStore. Todos los derechos reservados.</div>
+    </footer>
+    <script>
+        let productos = "/Productos/Js/productos.txt";
+        const publicacion = document.querySelector(".publicacion");
+        const numArray = 1;
+        const leerArchivo = async (ar) => {
+            const res = await fetch(ar);
+            const json = await res.json();
+            return json;
+        }
+
+    const cargarArray = async ()=>{
+        const array = await leerArchivo(productos);
+            let nombrePagina = document.querySelector("title"); nombrePagina.textContent = `${array[numArray].nombre} - PowerFuel Store`
+            let imagen = document.createElement("img");
+            let informacion = document.createElement("div");
+            let infoTitulo = document.createElement("h1");
+            let infoPrecio = document.createElement("label");
+            let infoInfoTitulo = document.createElement("span");
+            let infoInfoContainer = document.createElement("div");
+            let infoInfo = document.createElement("div");
+            let infoSabor = document.createElement("label");
+            let infoEnvase = document.createElement("label");
+            let infoPeso = document.createElement("label");
+            let infoPorcion = document.createElement("label");
+            let infoMarca = document.createElement("label");
+            let descripcion = document.createElement("div"); let descripcion_texto = document.createElement("p");
+            let comprar = document.createElement("button");
+            imagen.setAttribute("src",array[numArray].imagen); imagen.classList.add("imagen"); informacion.classList.add("informacion"); infoTitulo.classList.add("informacion-titulo"); infoPrecio.classList.add("informacion-precio"); infoPrecio.setAttribute("id","precio");
+            infoInfoTitulo.classList.add("informacion-info-titulo"); infoInfoContainer.classList.add("informacion-info-container"); infoInfo.classList.add("informacion-info"); infoSabor.classList.add("informacion-sabor"); infoEnvase.classList.add("informacion-envase"); infoPeso.classList.add("informacion-peso"); infoPorcion.classList.add("informacion-porcion"); infoMarca.classList.add("informacion-marca"); comprar.classList.add("producto-comprar2"); descripcion.classList.add("descripcion"); descripcion_texto.classList.add("descripcion-texto");
+            infoTitulo.textContent = array[numArray].nombre; infoPrecio.textContent = array[numArray].precio; infoInfoTitulo.textContent = "Información"; infoSabor.textContent = array[numArray].sabor; infoEnvase.textContent = array[numArray].envase; infoPeso.textContent = array[numArray].peso; infoPorcion.textContent = array[numArray].porcion; infoMarca.textContent = array[numArray].marca; comprar.textContent = "Agregar al carrito"; descripcion_texto.textContent = array[numArray].informacion;
+            infoInfoContainer.appendChild(infoInfo); infoInfo.appendChild(infoSabor); infoInfo.appendChild(infoEnvase); infoInfo.appendChild(infoPeso); infoInfo.appendChild(infoPorcion); infoInfo.appendChild(infoMarca); informacion.appendChild(infoTitulo); informacion.appendChild(infoPrecio); informacion.appendChild(infoInfoTitulo); informacion.appendChild(infoInfoContainer); informacion.appendChild(comprar); descripcion.appendChild(descripcion_texto); publicacion.appendChild(imagen); publicacion.appendChild(informacion); publicacion.appendChild(descripcion);
+            }
+    cargarArray();
+    </script>
+    <script src="/code.js"></script>
+</body>
+</html>

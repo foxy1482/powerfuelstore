@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!--FUENTES-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!--SÍMBOLOS-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="./css/styles.css"> <link rel="stylesheet" href="./css/catalogo.css">
+    <title>Catálogo</title>
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar navbar-expand-lg bg-body-tertiar">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon material-symbols-outlined" >menu</span><span style="font-family: Inter; font-weight: 310; font-size: 1.2rem;">Menú</span>
+                </button>
+                <a class="navbar-brand" id="titulo" href="index.html">POWERFUEL STORE</a>
+                <div>
+                    <div class="container-carrito oculto2">
+                        <h3>Carrito de COMPRAS</h3>
+                        <div class="cart_none">
+
+                        </div>
+                        <div class="carrito_compras">
+                            
+                        </div>
+                        <label class="cart_total"></label>
+                        <button class="cart_confirm">Confirmar</button>
+                    </div>
+            
+                </div>
+                <button class="navbar-cart" type="button">
+                    <a class="material-symbols-outlined">shopping_cart</a>
+                </button>
+                <div class="cuadro-busqueda">
+                    <input type="text" placeholder="Buscar...">
+                </div>
+                <button class="navbar-search">
+                    <span class="material-symbols-outlined">search</span>
+                </button>
+            </div>
+          </nav>
+          <div class="collapse navbar-collapse oculto" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="./index.html">inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./catalogo.html">catálogo</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./carrito.html">carrito</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./contacto.html" aria-disabled="true">contacto</a>
+                </li>
+            </ul>
+        </div>
+        
+    </header>
+    <main class="main">
+        <div class="catalogo-container">
+            <div class="busqueda">
+                <div class="filtros">
+                    <button id="actualizarfiltros">Actualizar</button>
+                    <ul class="filtros-lista">
+                        <li id="fCategorias">
+                            <span>Categorías</span>
+                            <div>
+                                <input type="radio" name="categoria" id="cat1"><label>Suplementos en polvo</label>
+                                <input type="radio" name="categoria" id="cat2"><label>Pastillas</label>
+                            </div>
+                        </li>
+                        <li id="fPrecio">
+                            <span>Precio</span>
+                            <div class="divPrecio">
+                                <div class="preciominimo">
+                                    <span id="pmintitulo">Precio mínimo</span>
+                                    <label for="rangoPrecio" id="indicadorMin">$5.00</label>
+                                    <input type="range" name="rangoPrecio" id="rangoPrecioMin" class="rangoPrecio" value="5" min="5" max="250">
+                                </div>
+                                <div class="preciomaximo">
+                                    <span id="pmaxtitulo">Precio Máximo</span>
+                                    <label for="rangoPrecio" id="indicadorMax">$10.00</label>
+                                    <input type="range" name="rangoPrecio" id="rangoPrecioMax" class="rangoPrecio" value="10" min="5" max="250">
+                                </div>
+                            </div>
+                        </li>
+                        <li id="fMarca">
+                            <span>Marca</span>
+                            <div>
+                                <input type="checkbox" name="marca" class="marca" id=""><label>ENA Sport</label>
+                                <input type="checkbox" name="marca" class="marca" id=""><label>Star Nutrition</label>
+                                <input type="checkbox" name="marca" class="marca" id=""><label>Gold Nutrition</label>
+                                <input type="checkbox" name="marca" class="marca" id=""><label>Xtrenght</label>
+                            </div>
+                        </li>
+                        <li id="fPeso">
+                            <span>Peso</span>
+                            <div>
+                                <input type="radio" class="peso" name="peso"><label>100g</label>
+                                <input type="radio" class="peso" name="peso"><label>500g</label>
+                                <input type="radio" class="peso" name="peso"><label>1000g</label>
+                                <input type="radio" class="peso" name="peso"><label>2000g</label>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="buscador">
+                    <input type="text" class="buscador__input" placeholder="Buscar...">
+                    <input type="submit" id="buscar" value="Buscar">
+                    <select class="buscador__orden">
+                        <option value="menor-mayor">Ordenar de Menor a Mayor</option>
+                        <option value="mayor-menor">Ordenar de Mayor a Menor</option>
+                    </select>
+                </div>
+                <div class="catalogo">
+                                      
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer__info">
+            <ul>
+                <li class="footer__info-item">Nombre de la empresa: <span>PowerFuelStore</span></li>
+                <li class="footer__info-item">Dirección: <span>Yerbal 2340, Ciudad Autónoma de Buenos Aires</span></li>
+                <li class="footer__info-item">Teléfono: <span>+54 11 3030-7604</span></li>
+                <li class="footer__info-item">Correo Electrónico: <span>soporte@pwrflstore.com</span></li>
+                <li class="footer__info-item footer-media">Redes sociales:
+                    <ul>
+                    <li class="footer__info-item">
+                        <img src="./img/ig.webp" alt="">
+                        <a href="instagram.com">@powerfuel.store</a>
+                    </li>
+                    <li class="footer__info-item">
+                        <img src="./img/fb.webp" alt="">
+                        <a href="facebook.com">PowerFuel Store</a>
+                    </li>
+                    <li class="footer__info-item">
+                        <img src="./img/tw.webp" class="tw-img" alt="">
+                        <a href="x.com">@PowerfuelStore</a>
+                    </li>
+                    </ul>
+                </li>
+                
+                <li class="footer__info-item">Copyright:</li>
+            </ul>
+        </div>
+        <div class="end-title">© <span id="footer-year"></span> PowerFuelStore. Todos los derechos reservados.</div>
+    </footer>
+    <script src="./js/code.js"></script>
+    <script src="./Productos/Js/productos.js"></script>
+</body>
+</html>

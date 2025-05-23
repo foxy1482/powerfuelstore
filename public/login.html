@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!--SÍMBOLOS-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="./css/auth.css"> <link rel="stylesheet" href="./css/styles.css">
+    <title>Auth - PowerFuelStore</title>
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar navbar-expand-lg bg-body-tertiar">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon material-symbols-outlined" >menu</span><span style="font-family: Inter; font-weight: 310; font-size: 1.2rem;">Menú</span>
+                </button>
+                <a class="navbar-brand" id="titulo" href="index.html">POWERFUEL STORE</a>
+                <button class="navbar-cart" type="button">
+                    <a class="material-symbols-outlined" href="carrito.html">shopping_cart</a>
+                </button>
+                <div class="cuadro-busqueda">
+                    <input type="text" placeholder="Buscar...">
+                </div>
+                <button class="navbar-search">
+                    <span class="material-symbols-outlined">search</span>
+                </button>
+            </div>
+          </nav>
+          <div class="collapse navbar-collapse oculto" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="index.html">inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="catalogo.html">catálogo</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="carrito.html">carrito</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contacto.html" aria-disabled="true">contacto</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <main>
+        <div class="form-container">
+        <form id="auth-login">
+            <h1>Login</h1>
+            <div class="email">
+                <label>Email
+                    <input type="email" placeholder="Email" name="email">
+                </label>
+                <br>
+            </div>
+            <div class="contrasena">
+                <label>Contraseña
+                    <input id="password" type="password" placeholder="Contraseña" name="password">
+                </label> <br>
+                
+                <div class="show-pw">
+                    <label class="pw__container">
+                        <input id="checkbox" type="checkbox" onclick="mostrarContraseña()"><span for="checkbox">Mostrar contraseña</span>
+                    </label>
+                </div>
+                <script src="script.js"></script>
+            </div>
+            <div class="enviar__container">
+                <input class="enviar" type="submit" value="Iniciar sesión">
+            </div>
+            <div class="olvidarse"><a href="cambiarpw.html" target="_blank">¿Olvidaste tu contraseña?</a></div>           
+            <div class="yahaycuenta"><a href="/registro">¿No tenés una cuenta creada? Creá una cuenta nueva.</a></div> 
+        </form>
+    </div>
+    </main>
+    <footer class="footer">
+        <div class="footer__info">
+            <ul>
+                <li class="footer__info-item">Nombre de la empresa: <span>PowerFuelStore</span></li>
+                <li class="footer__info-item">Dirección: <span>Yerbal 2340, Ciudad Autónoma de Buenos Aires</span></li>
+                <li class="footer__info-item">Teléfono: <span>+54 11 3030-7604</span></li>
+                <li class="footer__info-item">Correo Electrónico: <span>soporte@pwrflstore.com</span></li>
+                <li class="footer__info-item footer-media">Redes sociales:
+                    <ul>
+                    <li class="footer__info-item">
+                        <img src="./img/ig.webp" alt="">
+                        <a href="instagram.com">@powerfuel.store</a>
+                    </li>
+                    <li class="footer__info-item">
+                        <img src="./img/fb.webp" alt="">
+                        <a href="facebook.com">PowerFuel Store</a>
+                    </li>
+                    <li class="footer__info-item">
+                        <img src="./img/tw.webp" class="tw-img" alt="">
+                        <a href="x.com">@PowerfuelStore</a>
+                    </li>
+                    </ul>
+                </li>
+                
+                <li class="footer__info-item">Copyright:</li>
+            </ul>
+        </div>
+        <div class="end-title">© <span id="footer-year"></span> PowerFuelStore. Todos los derechos reservados.</div>
+    </footer>
+    <script src="./js/code.js"></script>
+    <script src="./js/auth.js"></script>
+</body>
+</html>
