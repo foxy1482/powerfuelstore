@@ -1,0 +1,167 @@
+.carro {
+    max-width: 1200px;
+    min-height: 70dvh;
+    margin: 2rem auto 2rem auto;
+    display: grid;
+    grid-template-columns: minmax(5rem,1fr) minmax(5rem,1fr);
+}
+.carro__datos {display: flex; height: 100%; background-color: #f2f2f2; padding: 1rem;
+}
+
+.carro__datos form {
+    width: 100%;
+margin: auto;
+    display: flex;
+    flex-direction: column;
+    
+}
+.form__title {
+    font-size: 1.6rem;
+    padding: .65rem;
+    font-family: 'Inter';
+    font-weight: 600;
+}
+.form__label {
+    font-size: .82rem;
+    text-transform: uppercase;
+    padding: .65rem;
+    font-family: 'Montserrat';
+}
+.form__textarea {
+    font-family: 'Inter';
+    font-weight: 400;
+    border: none;
+    outline: none;
+    resize: none;
+    width: 90%;
+    height: 1.9rem;
+    margin: 0 1rem 1rem 1rem;
+    padding: .5rem;
+    border-top: 0.106rem solid rgb(255, 103, 103);
+}
+.form__select {
+    margin: 0 1rem 1rem 1rem;
+    padding: .5rem;
+    background-color: #fff;
+    border: none;
+    border-top: 0.106rem solid rgb(255, 103, 103);
+    width: 90%;
+}
+.form__select > option {
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 1rem;
+}
+.disclaimer {
+    font-style: italic;
+    font-size: .81rem;
+    text-align: center;
+}
+.carro__confirm {
+    width: 40%;
+    margin: .8rem auto .8rem auto;
+    font-size: 1rem;
+    color: #fff;
+    padding: .24rem;
+    border: none;
+    border-radius: 1.5rem;
+    background-color: #2b2;
+}.carro__confirm:hover {cursor: pointer; background-color: #fff; color: #2b2; outline: 1px solid #2b2;}
+
+/* CARRO PRODUCTOS */
+.carro__productos {
+    margin: auto;
+    width: 100%;
+    max-height: 55rem;
+    padding: 1rem;
+}
+.carro__producto-indicator {
+    font-size: 1rem;
+    color: #333;
+    font-family: Arial;
+    font-weight: 200;
+}
+#indicator-1 {
+    margin: auto auto auto 1rem;
+}
+#indicator-2 {
+    margin: auto;
+}
+#indicator-3 {
+    margin: auto 1rem auto auto;
+}
+.carro__productos {
+    display: flex;
+    flex-direction: column;
+}
+.carro__productos > ul > li {
+    display: flex;
+    flex-direction: row;
+}
+.carro__producto-nombre {
+    margin: auto -2rem auto 1rem;
+    font-weight: 500;
+    font-size: .86rem;
+    width: 8rem;
+}
+.carro__producto-img {
+    max-width: 4.2rem;
+}
+.carro__producto-cantidad {
+    margin: auto;
+}
+.carro__producto-precio {
+    font-weight: 300;
+    margin: auto 1rem auto auto;
+    font-size: .8rem;
+}
+
+.carro__facturacion {
+    display: flex;
+    flex-direction: column;
+}
+.carro__facturacion-item {
+    display: flex;
+    flex-direction: row;
+    border-top: 1px solid #000;
+    margin: .9rem .9rem 0 .9rem;
+    padding: .6rem;
+}
+.carro__facturacion-item label {
+    margin: auto auto auto 0;
+    font-size: 1.2rem;
+    font-family: sans-serif;
+    font-weight: 500;
+    color: #888;
+}
+.carro__facturacion span {
+    margin: auto 0 auto auto;
+}
+.realizar-pedido
+{
+    background-color: #48e5;
+    color: #fff;
+    border: none;
+    width: 40%;
+    padding: .65rem;
+    font-size: 1rem;
+    margin: .8rem auto .8rem auto;
+    border-radius: 1.5rem;
+    transition: color .3s, background .2s, outline .1s;
+}
+.realizar-pedido:hover {
+    cursor: pointer;
+    background-color: #fff;
+    color: #48e;
+    outline: 1px solid #48e;
+}
+.pedido-realizar {
+    width: 40%;
+    margin: .8rem auto .8rem auto;
+    font-size: 1rem;
+    color: #fff;
+    padding: .24rem;
+    border: none;
+    border-radius: 1.5rem;
+    background-color: #2b2;
+}.pedido-realizar:hover {cursor: pointer; background-color: #fff; color: #2b2; outline: 1px solid #2b2;}

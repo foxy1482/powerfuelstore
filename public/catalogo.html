@@ -43,6 +43,13 @@
                 <button class="navbar-search">
                     <span class="material-symbols-outlined">search</span>
                 </button>
+                <button class="navbar-profile">
+                    <a href="/login">
+                        <img src="./img/user.png" alt="">
+                    <span class="navbar-user">Inicia sesión</span>
+                    </a>
+                    
+                </button>
             </div>
           </nav>
           <div class="collapse navbar-collapse oculto" id="navbarNav">
@@ -86,8 +93,8 @@
                                 </div>
                                 <div class="preciomaximo">
                                     <span id="pmaxtitulo">Precio Máximo</span>
-                                    <label for="rangoPrecio" id="indicadorMax">$10.00</label>
-                                    <input type="range" name="rangoPrecio" id="rangoPrecioMax" class="rangoPrecio" value="10" min="5" max="250">
+                                    <label for="rangoPrecio" id="indicadorMax">$50.00</label>
+                                    <input type="range" name="rangoPrecio" id="rangoPrecioMax" class="rangoPrecio" value="50" min="5" max="250">
                                 </div>
                             </div>
                         </li>
@@ -119,9 +126,9 @@
                         <option value="mayor-menor">Ordenar de Mayor a Menor</option>
                     </select>
                 </div>
-                <div class="catalogo">
+                <ul class="catalogo">
                                       
-                </div>
+                </ul>
             </div>
         </div>
     </main>
@@ -154,6 +161,7 @@
         </div>
         <div class="end-title">© <span id="footer-year"></span> PowerFuelStore. Todos los derechos reservados.</div>
     </footer>
+    <script src="./js/funciones.js"></script>
     <script src="./js/code.js"></script>
     <script src="./Productos/Js/productos.js"></script>
 </body>

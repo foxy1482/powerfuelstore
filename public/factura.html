@@ -1,0 +1,59 @@
+<html>
+        <head>
+            <link rel="stylesheet" href="./css/compra_exitosa.css">
+            
+        </head>
+        <body>
+        <div class="factura">
+            <h2 class="factura__title">POWERFUEL STORE</h2>
+            <h3 class="factura__subtitle">Factura Electrónica N°<span class="factura__numero">000</span></h3>
+            <p class="factura__text"><span class="factura__name"></span>,<br>¡Muchas gracias por comprar en PowerFuelStore! A continuación se muestran los productos adquiridos:</p>
+            <table class="factura__tabla avoid-break">
+                <thead>
+                    <tr>
+                        <th class="tabla__header">Producto</th>
+                        <th class="tabla__header">Cantidad</th>
+                        <th class="tabla__header">Precio</th>
+                        <th class="tabla__header">Descuento</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th class="tabla__footer">Subtotal</th>
+                        <th></th>
+                        <th class="tabla__footer" id="tablaSubtotal">$30.00</th>
+                        <th></th>
+                    </tr>
+                    <tr>
+                        <th class="tabla__footer">Costo de envío</th>
+                        <th></th>
+                        <th class="tabla__footer">$5.00</th>
+                        <th></th>
+                    </tr>
+                    <tr>
+                        <th class="tabla__footer">Total</th>
+                        <th></th>
+                        <th class="tabla__footer" id="tablaTotal">$30.00</th>
+                        <th></th>
+                    </tr>
+                </tfoot>
+            </table>
+            <div class="factura__envio">
+                <p>Datos de envío:</p>
+                <div class="envio__subinfo envio__direccion"></div>
+                <div class="envio__subinfo envio__altura"></div>
+                <div class="envio__subinfo envio__piso"></div>
+                <div class="envio__subinfo envio__depto"></div>
+                <div class="envio__subinfo envio__cp"></div>
+                <div class="envio__subinfo envio__barrio"></div>
+                <div class="envio__subinfo envio__ciudad"></div>
+            </div>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+        <script src="./js/factura.js"></script>
+        <script src="./js/funciones.js"></script>
+        </body>
+        </html>

@@ -1,0 +1,196 @@
+.main_container
+{
+    margin: 4rem auto 4rem auto;
+    max-width: 1200px;
+    border: 1px solid #4443;
+    border-top: none;
+    border-bottom: none;
+    padding: 1rem;
+    min-height: 45dvh;
+}
+.main_container > div
+{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    max-width: 980px;
+}
+.main__title 
+{
+    margin: auto;
+    font-size: 1.7rem;
+    font-weight: 600;
+    font-family: 'Montserrat';
+    padding-top: 1.3rem;
+    padding-bottom: 1.6rem;
+    border-bottom: 1px solid #f44;
+    text-align: center;
+    width: 100%;
+}
+.main__subtitle
+{
+    padding-top: 1.3rem;
+    font-family: 'Montserrat';
+    font-size: 1.08rem;
+    font-weight: 400;
+    margin: auto;
+}
+#pedidoId
+{
+    font-weight: bold;
+}
+.main__buttons
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.button
+{
+    padding: 1.1rem;
+    margin: 1rem;
+    font-size: 1rem;
+    border-radius: 1.4rem;
+    border: none;
+    outline: none;
+    text-align: center;
+}
+.main__button
+{
+    outline: 1px solid #f44;
+    color: #f44;
+    background-color: #fff;
+    transition: background .3s;
+}
+.main__button:hover
+{
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background-color: #f44;
+}
+.main__start
+{
+    outline: 1px solid #48e;
+    color: #48e;
+    background-color: #fff;
+    transition: background .3s;
+}
+.main__start:hover
+{
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background-color: #48e;
+}
+
+/* FACTURA ELECTRÓNICA */
+
+.factura
+{
+    margin: auto;
+    padding: 1rem;
+    min-height: 50dvh;
+}
+.factura__title
+{
+    font-family:Verdana;
+    font-weight: bolder;
+    font-size: 2rem;
+    margin: auto;
+    text-align: center;
+}
+.factura__subtitle
+{
+    margin: auto;
+    text-align: center;
+    font-weight: 400;
+}
+.factura__text
+{
+    font-size: 1.1rem;
+    text-align: center;
+    margin: 1.4rem auto 1.4rem auto;
+}
+.factura__name
+{
+    font-size: 1.19rem;
+    font-weight: 600;
+}
+
+.factura__tabla
+{
+    min-height: 40dvh;
+    border-collapse: collapse;
+    padding: 0;
+    margin: 0;
+    border: 2px solid #000;
+    max-width: 1000px;
+    margin: auto;
+}
+th
+{
+    border: 1px solid #000;
+
+}
+.factura__tabla > thead{
+    border-bottom: 3px solid #444;
+}
+.tabla__header
+{
+    height: 2.2rem;
+    background-color: #ddd;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    min-width: 7.6rem !important;
+}
+.tabla__header:first-child
+{
+    min-width: 60%;
+}
+.factura__tabla > tfoot
+{
+    background-color: rgb(227, 255, 43);
+}
+.factura__tabla > tfoot > tr > th{
+    border: none;
+}
+.tabla__footer
+{
+    height: 2.2rem;
+}
+.tabla__producto
+{
+    font-size: .93rem;
+    font-size: Calibri;
+    font-weight: 350;
+    min-height: 1.8rem;
+    max-width: 11rem;
+    text-wrap: wrap;
+}
+
+/* Datos de envio */
+
+.factura__envio
+{
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+}
+.envio__subinfo
+{
+    margin: .2rem;
+}
+.envio__subinfo > .envio__label
+{
+    font-weight: 300;
+}
+.envio__label > span
+{
+    font-weight: bold;
+}
+
+.avoid-break {
+    page-break-inside: avoid;
+    break-inside: avoid;
+}

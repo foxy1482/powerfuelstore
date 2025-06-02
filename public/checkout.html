@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!--FUENTES-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!--SÍMBOLOS-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="./css/styles.css"> <link rel="stylesheet" href="./css/checkout.css">
+    <title>Checkout</title>
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar navbar-expand-lg bg-body-tertiar">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon material-symbols-outlined" >menu</span><span style="font-family: Inter; font-weight: 310; font-size: 1.2rem;">Menú</span>
+                </button>
+                <a class="navbar-brand" id="titulo" href="/index.html">POWERFUEL STORE</a>
+                <button class="navbar-cart" type="button">
+                    <a class="material-symbols-outlined" href="/carrito.html">shopping_cart</a>
+                </button>
+                <div class="cuadro-busqueda">
+                    <input type="text" placeholder="Buscar...">
+                </div>
+                <button class="navbar-search">
+                    <span class="material-symbols-outlined">search</span>
+                </button>
+                <button class="navbar-profile">
+                    <a href="/login">
+                        <img src="../../img/user.png" alt="">
+                    <span class="navbar-user">Inicia sesión</span>
+                    </a>
+                    
+                </button>
+            </div>
+          </nav>
+          <div class="collapse navbar-collapse oculto" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="../../index.html">inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../../catalogo.html">catálogo</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../../carrito.html">carrito</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../../contacto.html" aria-disabled="true">contacto</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <main class="main">
+        <div class="carro">
+            <div class="carro__datos">
+                <form>
+                    <h2 class="form__title">Completá tus datos para proceder</h2>
+                    <label class="form__label">Nombre de usuario</label>
+                    <input type="text" name="username" id="inputUsername" placeholder="Introduce tu nombre de usuario" class="form__textarea" value="" required></input>
+                    <label class="form__label">Correo electrónico</label>
+                    <input type="email" name="email" id="inputEmail" placeholder="Introduce tu correo electrónico" class="form__textarea" required></input>
+                    <label class="disclaimer">Estos datos se extraen automáticamente de tu cuenta. Puedes modificarlos si es necesario.</label>
+                    <input type="submit" class="carro__confirm" value="Confirmar">
+                </form>
+            </div>
+            <div class="carro__productos">
+                <ul>
+                    <li>
+                        <h3 class="carro__producto-indicator" id="indicator-1">Producto</h3>
+                        <h4 class="carro__producto-indicator" id="indicator-2">Cantidad</h4>
+                        <h4 class="carro__producto-indicator" id="indicator-3">Precio</h4>
+                    </li>
+                </ul>
+                <div class="carro__facturacion">
+                    <div class="carro__facturacion-item carro__subtotal">
+                        <label>Subtotal</label>
+                        <td><span></span></td>
+                    </div>
+                    <div class="carro__facturacion-item carro__descuentos">
+                        <label>Descuentos</label>
+                        <td><span>$0.00</span></td>
+                    </div>
+                    <div class="carro__facturacion-item carro__total">
+                        <label>Total</label>
+                        <td><span></span></td>
+                    </div>
+                    <label class="disclaimer">El costo fijo de envío son $5.00 adicionales</label>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer__info">
+            <ul>
+                <li class="footer__info-item">Nombre de la empresa: <span>PowerFuelStore</span></li>
+                <li class="footer__info-item">Dirección: <span>Yerbal 2340, Ciudad Autónoma de Buenos Aires</span></li>
+                <li class="footer__info-item">Teléfono: <span>+54 11 3030-7604</span></li>
+                <li class="footer__info-item">Correo Electrónico: <span>soporte@pwrflstore.com</span></li>
+                <li class="footer__info-item footer-media">Redes sociales:
+                    <ul>
+                    <li class="footer__info-item">
+                        <img src="../../img/ig.webp" alt="">
+                        <a href="instagram.com">@powerfuel.store</a>
+                    </li>
+                    <li class="footer__info-item">
+                        <img src="../../img/fb.webp" alt="">
+                        <a href="facebook.com">PowerFuel Store</a>
+                    </li>
+                    <li class="footer__info-item">
+                        <img src="../../img/tw.webp" class="tw-img" alt="">
+                        <a href="x.com">@PowerfuelStore</a>
+                    </li>
+                    </ul>
+                </li>
+                
+                <li class="footer__info-item">Copyright:</li>
+            </ul>
+        </div>
+        <div class="end-title">© <span id="footer-year"></span> PowerFuelStore. Todos los derechos reservados.</div>
+    </footer>
+    <script src="./js/funciones.js"></script>
+    <script src="./js/code.js"></script>
+    <script src="./js/checkout.js"></script>
+</body>
+</html>

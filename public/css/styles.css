@@ -347,6 +347,36 @@ body {
     color: #fdd;
 }
 
+/*PAGINA DE PERFIL*/
+.opciones > ul
+{
+    list-style: none;
+}
+.opciones > ul > li
+{
+    width: 100%;
+    padding: 1rem;
+}
+.opciones > ul > li > button
+{
+    min-width: fit-content;
+    height: 3rem;
+    display: flex;
+    border: 1px solid #3333;
+    background: none;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+.opciones > ul > li > button:hover 
+{
+    background-color: #eee;
+}
+.opciones > ul > li > button > span
+{
+    margin: auto;
+}
+
+
     @media screen and (max-width: 500px) {
         body {
             width: 100dvw;
@@ -360,3 +390,4 @@ body {
             padding: 0 5px 0 5px;
         }
     }
+

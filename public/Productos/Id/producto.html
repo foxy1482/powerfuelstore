@@ -29,6 +29,13 @@
                 <button class="navbar-search">
                     <span class="material-symbols-outlined">search</span>
                 </button>
+                <button class="navbar-profile">
+                    <a href="/login">
+                        <img src="../../img/user.png" alt="">
+                    <span class="navbar-user">Inicia sesión</span>
+                    </a>
+                    
+                </button>
             </div>
           </nav>
           <div class="collapse navbar-collapse oculto" id="navbarNav">
@@ -81,19 +88,14 @@
         </div>
         <div class="end-title">© <span id="footer-year"></span> PowerFuelStore. Todos los derechos reservados.</div>
     </footer>
+    <script src="../../js/code.js"></script>
+    <script src="../../js/funciones.js"></script>
     <script>
         const sitio = window.location.pathname;
         const sitioSep = sitio.split('/');
 
         const publicacion = document.querySelector(".publicacion");
-        const obtenerProducto = ()=>{
-            return fetch ('/api/productos')
-            .then(response => response.json())
-            .then(data => {
-                console.log(data);
-                return data;
-            });
-        }
+
         const preCarga = async ()=> {
             const array = await obtenerProducto();
             const nuevo = array.filter((producto) => producto.id == (sitioSep[sitioSep.length - 1]));
@@ -103,7 +105,7 @@
 
 
 
-    const cargarArray = async ()=>{
+    const cargarArray5 = async ()=>{
         const array = await preCarga();
             let nombrePagina = document.querySelector("title"); nombrePagina.textContent = `${array[0].nombre} - PowerFuel Store`
             let imagen = document.createElement("img");
@@ -125,8 +127,7 @@
             infoTitulo.textContent = array[0].nombre; infoPrecio.textContent = array[0].precio; infoInfoTitulo.textContent = "Información"; infoSabor.textContent = array[0].sabor; infoEnvase.textContent = array[0].envase; infoPeso.textContent = array[0].peso; infoPorcion.textContent = array[0].porcion; infoMarca.textContent = array[0].marca; comprar.textContent = "Agregar al carrito"; descripcion_texto.innerHTML = array[0].contenido;
             infoInfoContainer.appendChild(infoInfo); infoInfo.appendChild(infoSabor); infoInfo.appendChild(infoEnvase); infoInfo.appendChild(infoPeso); infoInfo.appendChild(infoPorcion); infoInfo.appendChild(infoMarca); informacion.appendChild(infoTitulo); informacion.appendChild(infoPrecio); informacion.appendChild(infoInfoTitulo); informacion.appendChild(infoInfoContainer); informacion.appendChild(comprar); descripcion.appendChild(descripcion_texto); publicacion.appendChild(imagen); publicacion.appendChild(informacion); publicacion.appendChild(descripcion);
             }
-    cargarArray();
+    cargarArray5();
     </script>
-    <script src="../../js/code.js"></script>
 </body>
 </html>
