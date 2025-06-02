@@ -1,6 +1,7 @@
 // CARGA DE LA LISTA DE PRODUCTOS
 
 const tablaProductos = document.querySelector(".factura__tabla > tbody");
+
 const carro = JSON.parse(localStorage.getItem("carro"));
 const subtotalElement = document.getElementById("tablaSubtotal");
 const totalElement = document.getElementById("tablaTotal");
