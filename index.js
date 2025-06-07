@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const port = 80;
+const port = 4000;
 const dotenv = require('dotenv');
 const db = require('./db.js');
 const {hash, compare} = require('bcrypt');
@@ -26,7 +26,9 @@ app.get('/perfil',(req,res)=>{
 app.get("/checkout",(req,res)=> {
     res.sendFile(__dirname + '/public/checkout.html');
 })
-
+app.get("/catalogo",(req,res)=> {
+    res.sendFile(__dirname + '/public/catalogo.html');
+})
 app.get("/compraexitosa",(req,res)=>
 {
     res.sendFile(__dirname + '/public/compra_exitosa.html');
